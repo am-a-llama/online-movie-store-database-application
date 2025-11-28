@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Update Movie #{{ movie_id }}</h2>
+
+<form action="/update_movie_submit" method="post">
+
+    <input type="hidden" name="movie_id" value="{{ movie_id }}">
+
+    <label>New Movie Name:</label><br>
+    <input type="text" name="name"><br><br>
+
+    <label>New Director:</label><br>
+    <input type="text" name="director"><br><br>
+
+    <label>New Genre:</label><br>
+    <input type="text" name="genre"><br><br>
+
+    <label>New Language:</label><br>
+    <input type="text" name="language"><br><br>
+
+    <label>New Release Year:</label><br>
+    <input type="number" name="year"><br><br>
+
+    <button type="submit">Update Movie</button>
+</form>
+
+<a href="/"><button>Back</button></a>
+{% endblock %}

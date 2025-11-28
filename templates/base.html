@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Movie Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background: #111;
+            color: #eee;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f6ff00;
+            margin-bottom: 25px;
+        }
+
+        .box {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 30px;
+            width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 22px;
+            margin: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+            background: #222;
+            color: #eee;
+            border: 1px solid #444;
+        }
+
+        button:hover {
+            background: #333;
+            color: #61dafb;
+            border-color: #61dafb;
+        }
+
+        /* ==== Tables ==== */
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 95%;
+            background: #1f1f1f;
+            color: #eee;
+        }
+
+        th {
+            background: #272727;
+            padding: 10px;
+            border: 1px solid #444;
+            color: #61dafb;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid #444;
+        }
+
+        pre {
+            text-align: left;
+            background: #1b1b1b;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            color: #eee;
+            overflow-x: auto;
+        }
+
+        a button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>Online Movie Store DBMS</h1>
+
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Select a Table or View to Display</h2>
+
+<div class="select-container">
+
+    <!-- MAIN TABLES -->
+    <div class="section">
+        <h3>Main Tables</h3>
+        <form action="/view_table" method="get">
+            <select name="table" required>
+                <option value="">-- Select Table --</option>
+                <option value="CUSTOMER">CUSTOMER</option>
+                <option value="MOVIE">MOVIE</option>
+                <option value="MOVIE_INFO">MOVIE_INFO</option>
+                <option value="ORDER_FINAL">ORDER_FINAL</option>
+                <option value="ORDER_PAYMENT">ORDER_PAYMENT</option>
+                <option value="TRANSACTION_FINAL">TRANSACTION_FINAL</option>
+                <option value="REVIEW">REVIEW</option>
+            </select>
+            <button type="submit">View Table</button>
+        </form>
+    </div>
+
+    <br>
+
+    <!-- PREDEFINED VIEWS -->
+    <div class="section">
+        <h3>📗 Predefined Views</h3>
+<form action="/view_table" method="get">
+    <select name="table">
+        <option value="">-- Select View --</option>
+        <option>VW_MOVIE_RATINGS</option>
+        <option>VW_MOVIE_DETAILS</option>
+        <option>VW_TRANSACTION_SUMMARY</option>
+        <option>VW_MOVIE_REVIEWS</option>
+        <option>VW_SALES_SUMMARY</option>
+    </select>
+    <button type="submit">View View</button>
+</form>
+    </div>
+
+    <br>
+
+    <!-- ADVANCED REPORTS -->
+    <div class="section">
+        <h3>Advanced Reports</h3>
+        <form action="/view_report" method="get">
+            <select name="report" required>
+                <option value="">-- Select Advanced Report --</option>
+                <option value="ADV_TOP_CUSTOMERS">ADV_TOP_CUSTOMERS</option>
+                <option value="ADV_TOP_MOVIES">ADV_TOP_MOVIES</option>
+                <option value="ADV_REVENUE_BY_GENRE">ADV_REVENUE_BY_GENRE</option>
+                <option value="ADV_PAYMENT_METHOD_STATS">ADV_PAYMENT_METHOD_STATS</option>
+                <option value="ADV_MOVIE_REVIEW_SCOREBOARD">ADV_MOVIE_REVIEW_SCOREBOARD</option>
+            </select>
+            <button type="submit">Run Report</button>
+        </form>
+    </div>
+
+
+    <br><br>
+<h3>Modify Data</h3>
+
+<a href="/delete_movie">
+    <button>Delete a Movie</button>
+</a>
+
+
+</div>
+
+<style>
+    h2, h3 {
+        text-align: center;
+        color: #fff;
+    }
+
+    .select-container {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .section {
+        background: #222;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: 1px solid #333;
+    }
+
+    select {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        background: #111;
+        color: #fff;
+        border: 1px solid #444;
+        border-radius: 6px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background: #0a84ff;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #006edc;
+    }
+</style>
+
+{% endblock %}

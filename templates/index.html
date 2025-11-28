@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Menu</h2>
+
+<form action="/drop">
+    <button type="submit">Drop Tables</button>
+</form>
+
+<form action="/create">
+    <button type="submit">Create Tables</button>
+</form>
+
+<form action="/populate">
+    <button type="submit">Populate Tables</button>
+</form>
+
+<form action="/query">
+    <button type="submit">Query Tables</button>
+</form>
+
+<hr>
+<h2>Manage Movies</h2>
+
+<form action="/add_movie" method="get">
+    <button type="submit">Add a New Movie</button>
+</form>
+
+<form action="/select_movie_update" method="get">
+    <button type="submit">Update Existing Movie</button>
+</form>
+
+<form action="/delete_movie" method="get">
+    <button type="submit">Delete Movie</button>
+</form>
+
+
+
+{% endblock %}
